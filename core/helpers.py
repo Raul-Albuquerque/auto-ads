@@ -24,5 +24,5 @@ def get_today_timestamp(period: str) -> int:
 	else:
 		raise ValueError("O parâmetro 'period' deve ser 'start' ou 'end'.")
 
-	timestamp = int(today.timestamp() * 1000)  # Convertendo para milissegundos
+	timestamp = int(today.timestamp() * 1000)
 	return timestamp

@@ -1,0 +1,1 @@
+from .get_all_purchases import router as hotmart_router
