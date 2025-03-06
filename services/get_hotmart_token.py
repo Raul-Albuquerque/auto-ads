@@ -18,7 +18,7 @@ siberia_client_id = os.getenv("SIBERIA_CLIENT_ID")
 siberia_client_secret = os.getenv("SIBERIA_CLIENT_SECRET")
 siberia_basic = os.getenv("SIBERIA_BASIC")
 
-def get_token_auth(account: str):
+def get_hotmart_token_auth(account: str):
   if account == "ald":
     client_id = ald_client_id
     client_secret = ald_client_secret
@@ -46,9 +46,9 @@ def get_token_auth(account: str):
     raise Exception(f"Falha ao obter token para {account}.")
   
 
-def get_token(account:str):
+def get_hotmart_token(account:str):
   if account not in token_cache or token_cache[account] is None:
-    get_token_auth(account)
+    get_hotmart_token_auth(account)
   return token_cache[account]
 
 

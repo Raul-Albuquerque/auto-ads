@@ -4,7 +4,7 @@ from fastapi import APIRouter
 from datetime import datetime
 
 from core.helpers import get_yesterday_timestamp, get_today_timestamp
-from services import get_token
+from services import get_hotmart_token
 from models.report_models import ReportResponse 
 
 load_dotenv(override=True)
@@ -16,7 +16,7 @@ HOTMART_URL = "https://developers.hotmart.com/payments/api/v1/sales/history"
 
 @router.get("/hotmart/{account}/all/{day}")
 def get_all_purchases(account: str, day: str):
-  token = get_token(account)
+  token = get_hotmart_token(account)
   HEADERS = {
     "Authorization": f"Bearer {token}",
     "Content-Type": "application/json"
