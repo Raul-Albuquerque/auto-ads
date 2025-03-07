@@ -1,1 +1,2 @@
-from .get_hotmart_token import get_token
+from .get_hotmart_token import get_hotmart_token
+from .get_meta_token import get_meta_token
