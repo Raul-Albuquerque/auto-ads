@@ -20,8 +20,6 @@ second_app_secret = os.getenv("SECOND_APP_SECRET")
 second_app_long_lived_token = os.getenv("SECOND_APP_LONG_LIVED_TOKEN")
 
 def get_meta_token_auth(profile: str):
-  profile.lower()
-  global fb_exchange_token
   if profile == "first":
     client_id = first_app_id
     client_secret = first_app_secret
