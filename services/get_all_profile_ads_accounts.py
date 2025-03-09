@@ -8,6 +8,7 @@ timezone = pytz.timezone("America/Sao_Paulo")
 local_time = datetime.now(timezone).strftime("%Y-%m-%d %H:%M:%S")
 
 def get_all_profile_ads_accounts(profile: str):
+  profile = profile.lower()
   access_token = get_meta_token(profile)
   url = f"https://graph.facebook.com/v22.0/me/adaccounts?access_token={access_token}"
   response = requests.get(url=url)

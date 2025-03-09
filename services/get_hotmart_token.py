@@ -19,7 +19,7 @@ siberia_client_secret = os.getenv("SIBERIA_CLIENT_SECRET")
 siberia_basic = os.getenv("SIBERIA_BASIC")
 
 def get_hotmart_token_auth(account: str):
-  account.lower()
+  account = account.lower()
   if account == "ald":
     client_id = ald_client_id
     client_secret = ald_client_secret
